@@ -1,0 +1,63 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.Notas.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Editar Nota</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Nota.Id_Nota" />
+            <div class="form-group">
+                <label asp-for="Nota.Descripcion" class="control-label"></label>
+                <input asp-for="Nota.Descripcion" class="form-control" />
+                <span asp-validation-for="Nota.Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nota.Logro" class="control-label"></label>
+                <input asp-for="Nota.Logro" class="form-control" />
+                <span asp-validation-for="Nota.Logro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nota.Puntos" class="control-label"></label>
+                <input asp-for="Nota.Puntos" class="form-control" />
+                <span asp-validation-for="Nota.Puntos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nota.Mes" class="control-label"></label>
+                <input asp-for="Nota.Mes" class="form-control" />
+                <span asp-validation-for="Nota.Mes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nota.Año" class="control-label"></label>
+                <input asp-for="Nota.Año" class="form-control" />
+                <span asp-validation-for="Nota.Año" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nota.Adjunto" class="control-label"></label>
+                <input asp-for="Adjunto" class="form-control" type="file"/>
+                <span asp-validation-for="Nota.Adjunto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,91 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.Indicadores.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Crear Indicador</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Indicador.Nombre_Indicador" class="control-label"></label>
+                <input asp-for="Indicador.Nombre_Indicador" class="form-control" />
+                <span asp-validation-for="Indicador.Nombre_Indicador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Descripcion_Indicadores" class="control-label"></label>
+                <input asp-for="Indicador.Descripcion_Indicadores" class="form-control" />
+                <span asp-validation-for="Indicador.Descripcion_Indicadores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Medida" class="control-label"></label>
+                <input asp-for="Indicador.Medida" class="form-control" />
+                <span asp-validation-for="Indicador.Medida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Objetivo" class="control-label"></label>
+                <input asp-for="Indicador.Objetivo" class="form-control" />
+                <span asp-validation-for="Indicador.Objetivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Perfil" class="control-label"></label>
+                <input asp-for="Indicador.Perfil" class="form-control" />
+                <span asp-validation-for="Indicador.Perfil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Ponderacion" class="control-label"></label>
+                <input asp-for="Indicador.Ponderacion" class="form-control" />
+                <span asp-validation-for="Indicador.Ponderacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Base" class="control-label"></label>
+                <input asp-for="Indicador.Base" class="form-control" />
+                <span asp-validation-for="Indicador.Base" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Meta" class="control-label"></label>
+                <input asp-for="Indicador.Meta" class="form-control" />
+                <span asp-validation-for="Indicador.Meta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Fecha_Aproximada" class="control-label"></label>
+                <input asp-for="Indicador.Fecha_Aproximada" class="form-control" />
+                <span asp-validation-for="Indicador.Fecha_Aproximada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Departamento" class="control-label"></label>
+                <input asp-for="Indicador.Departamento" class="form-control" />
+                <span asp-validation-for="Indicador.Departamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Indicador.Periodo" class="control-label"></label>
+                <input asp-for="Indicador.Periodo" class="form-control" />
+                <span asp-validation-for="Indicador.Periodo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Responsable</label>
+                <select id="Id" asp-for="Indicador.Responsable.Id" asp-items="Model.Options" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.IndicadoresConfig.EditModel
+
+@{
+    ViewData["Title"] = "Configuración";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Configuración</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IndicadorConfig.Id" />
+            <input type="hidden" asp-for="IndicadorConfig.Id" />
+            <div class="form-group">
+                <label asp-for="IndicadorConfig.Mes" class="control-label"></label>
+                <input asp-for="IndicadorConfig.Mes" class="form-control" />
+                <span asp-validation-for="IndicadorConfig.Mes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IndicadorConfig.Año" class="control-label"></label>
+                <input asp-for="IndicadorConfig.Año" class="form-control" />
+                <span asp-validation-for="IndicadorConfig.Año" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

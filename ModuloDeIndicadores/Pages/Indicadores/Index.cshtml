@@ -1,0 +1,51 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.Indicadores.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Indicadores</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="Create" class="btn btn-info">
+            <i class="fas fa-plus"></i>&nbsp; Crear Nuevo Registro
+        </a>
+        <div class="btn btn-info">
+            <div class="upload-button">
+                <input id="files" name="files" type="file" size="1" multiple onchange="uploadFiles('files');" />
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="col-12 border p-3">
+
+    <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Medida</th>
+                <th>Objetivo</th>
+                <th>Perfil</th>
+                <th>Ponderación</th>
+                <th>Base</th>
+                <th>Meta</th>
+                <th>Departamento</th>
+                <th>Periodo</th>
+                <th>Fecha Aproximada</th>
+                <th>Responsable</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/Indicadores.js"></script>
+}

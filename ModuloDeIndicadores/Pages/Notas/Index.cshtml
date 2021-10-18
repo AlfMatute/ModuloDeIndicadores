@@ -1,0 +1,42 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.Notas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Digitación</h2>
+    </div>
+    @*<div class="col-6 text-right">
+        <a asp-page="Create" class="btn btn-info">
+            <i class="fas fa-plus"></i>&nbsp; Crear Nuevo Registro
+        </a>
+    </div>*@
+</div>
+<br />
+<div class="col-12 border p-3">
+
+    <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Indicador</th>
+                <th>Descripcion</th>
+                <th>Responsable</th>
+                <th>Departamento</th>
+                <th>Nota</th>
+                <th>Logro</th>
+                <th>Puntos</th>
+                <th>Mes</th>
+                <th>Año</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/Notas.js"></script>
+}

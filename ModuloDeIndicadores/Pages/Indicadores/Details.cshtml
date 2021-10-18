@@ -1,0 +1,68 @@
+﻿@page
+@model ModuloDeIndicadores.Pages.Indicadores.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Indicador</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Nombre_Indicador)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Nombre_Indicador)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Descripcion_Indicadores)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Descripcion_Indicadores)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Medida)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Medida)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Objetivo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Objetivo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Perfil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Perfil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Ponderacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Ponderacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Base)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Base)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indicador.Meta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indicador.Meta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Indicador.Id_Indicador">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
